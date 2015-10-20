@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Century Refrigeration</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            @import url('//fonts.googleapis.com/css?family=Righteous');
+            .logo { text-align: center; margin-bottom: 2em; }
+            #logo { margin-top: -3em; }
+            .container-fluid { background-color: #000000; }
+            .greenDiv { background-color: #0baa4b; height: 6em; }
+            .fname { color: #0baa4b; font-size: 3em; text-align: center; font-family: 'Righteous', cursive; }
+            .text1 { color: #ffffff; font-size: 18pt; padding-left: 12px; padding-right: 12px; }
+            .btn1 { margin-bottom: 8em; }
+            .spacer { height: 2em; }
+            .timelines { margin-top: 35%; }
+            .content { width: 98%; margin: auto; }
+            #RaeVideo { background-color: #ffffff; text-align: center; padding-top: 1.5em; }
+            #blackBox { background-color: #000000; width: 95%; margin: auto; }
+            #player { background-color: #000000; }
+            #loaderText { color: bisque; }
+            
+            @media all and (max-width:720px) {
+                .timelines { margin-top: 0; }
+            }
+        </style>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function setPlayerRatio () {
+                blackBox = document.getElementById('blackBox');
+                width = blackBox.clientWidth;
+                height = width / 1.778;
+                blackBox.style.paddingTop = height / 4 + 'px';
+                blackBox.style.paddingBottom = height / 4 + 'px';
+                document.getElementById("scrol").style.marginBottom = height * 0.3 + 'px';
+            }
+            
+            function hideText (event) {
+                document.getElementById('loaderText').style.display = 'none';
+            }
+            
+            $(document).ready(function(){
+               setPlayerRatio();
+                $(window).on('orientationchange', setPlayerRatio);
+                document.getElementById('ytplayer').setAttribute('height', height);
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div class="greenDiv"></div>
+        <div class="container-fluid">
+            
+            <div class="logo">
+                <img width="280" id="logo" src="//dl.dropboxusercontent.com/u/14320617/rae/century/logo.png" alt="logo" />
+            </div>
+
+            <div class="content">
+                    
+                <div class="row">
+                    <div class="col-lg-2 col-md-0 col-xs-0"></div>
+                    <div class="col-lg-3 col-md-6 col-xs-12 fname">Picture This<br />##firstname##</div>
+                    <div class="col-lg-5 col-md-6 col-xs-12 text1">We're developing something just for you and ##company##. Research and development is important to us.
+                    Your feedback helps with the big picture. Click the play button to hear from our CEO, Eric Swank and find out how to get involved.</div>
+                    <div class="col-lg-2 col-md-0 col-xs-0"></div>
+                </div>
+
+                <div class="spacer"></div>
+                
+                <div class="row">
+                    
+                    <div class="col-lg-4 col-sm-4 col-xs-12" style="padding:0;">
+                        
+                        <div class="timelines">
+                            <img style="width:100%;" src="//dl.dropboxusercontent.com/u/14320617/rae/century/Timeline_LeftSide.png" alt="left-side-timeline" />
+                        </div>
+    
+                    </div>
+                    
+                    <div id="RaeVideo" class="col-lg-4 col-sm-4 col-xs-12">
+                        
+                        <div id="blackBox">
+                            <span id="loaderText">Video Loading...</span>
+                            <div>
+                                <iframe id="ytplayer" width="99%" height="" src="//www.youtube.com/embed/J_VgfsZ8CFA?rel=0" frameborder="0" allowfullscreen onload="hideText()"></iframe>
+                            </div>
+                        </div>
+                        
+                        <div id="scrol" style="text-align:center;">
+                            <p style="font-size:140%;">Scroll down <span class="glyphicon glyphicon-arrow-down"></span></p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-4 col-xs-12" style="padding:0;">
+                        <div class="timelines">
+                            <img style="width:100%;" src="//dl.dropboxusercontent.com/u/14320617/rae/century/Timeline_RightSide.png" alt="right-side-timeline" />
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="spacer"></div>
+                    
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6" style="text-align: center;">
+                        <p class="text1">Your $50 Amazon gift card is on its way just for visiting this link! Take a quick survey and you could win a new style Polaroid camera! Another great
+                        example of old technology meets new design. Go ahead, Point & Click!</p>
+                        <form method="post">
+                            <button class="btn btn-success btn1" type="submit"><span class="text1">Point and Click!</span></button>
+                        </form>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                
+                <div class="spacer"></div>
+            </div>
+            
+        </div>
+    </body>
+</html>
