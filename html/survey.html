@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Century Refrigeration</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <style>
+            .logo { text-align: center; margin-bottom: 2em; }
+            #logo { margin-top: -3em; }
+            .container-fluid { background-color: #ffffff; }
+            .greenDiv { background-color: #0baa4b; height: 6em; }
+            .text1 { color: #ffffff; font-size: 18pt; padding-left: 12px; padding-right: 12px; }
+            .greenText { color: #0baa4b; }
+            .btn1 { margin-bottom: 8em; }
+            .spacer { height: 2em; }
+            .content { width: 98%; margin: auto; }
+            
+            @media all and (max-width:720px) {
+                .sidePics { display: none; }
+            }
+        </style>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="greenDiv"></div>
+        
+        <div class="container-fluid">
+            
+            <div class="logo">
+                <img width="280" id="logo" src="../images/logo.png" alt="logo" />
+            </div>
+            
+            <div class="row content">   
+                <div class="col-lg-3"></div>
+                
+                <div class="col-lg-5 col-sm-8 col-xs-12">
+                    <div class="greenText">
+                        <h2>##firstname##, tell us what to shoot for with our new unit cooler so we can continue to develop the best product possible. </h2>
+                    </div>
+                    
+                    <!-- QUESTIONS START HERE -->
+                    <form method="post" role="form" id="survey">
+                        
+                        <div class="form-group">
+                            <label for="Q1"><h2><small>What one word describes Century Refrigeration unit coolers?</small></h2></label>
+                            <input type="text" class="form-control" name="Q1" id="Q1" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Q2"><h2><small>If you could improve 3 things about Century's unit coolers, what would they be?</small></h2></label>
+                            <textarea rows=3 class="form-control" name="Q2" id="Q2"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Q3"><h2><small>Approximately, how many Century unit coolers do you sell annually?</small></h2></label>
+                            <input type="text" class="form-control" name="Q3" id="Q3" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Q4"><h2><small>Why do you buy (or not buy) Century unit coolers?</small></h2></label>
+                            <textarea rows=3 class="form-control" name="Q4" id="Q4"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Q5"><h2><small>What prevents you from buying more Century Refrigeration unit coolers?</small></h2></label>
+                            <textarea rows=3 class="form-control" name="Q5" id="Q5"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Q6"><h2><small>Overall, what does Century Refrigeration do best?</small></h2></label>
+                            <textarea rows=3 class="form-control" name="Q6" id="Q6"></textarea>
+                        </div>
+                        
+                        <h2><small>On a scale of 1 to 5 with 5 being the best, how would you rate Century Refrigeration in the following areas:</small></h2>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Reputation/Brand Awareness</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q7" name="Q7" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q7" name="Q7" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q7" name="Q7" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q7" name="Q7" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q7" name="Q7" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Sales Support</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q8" name="Q8" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q8" name="Q8" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q8" name="Q8" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q8" name="Q8" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q8" name="Q8" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Service Support</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q9" name="Q9" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q9" name="Q9" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q9" name="Q9" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q9" name="Q9" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q9" name="Q9" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Quality</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q10" name="Q10" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q10" name="Q10" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q10" name="Q10" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q10" name="Q10" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q10" name="Q10" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Innovation</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q11" name="Q11" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q11" name="Q11" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q11" name="Q11" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q11" name="Q11" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q11" name="Q11" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 0 20px; border: 1px solid #ccc; border-radius: 4px;">
+                            <div class="radio">
+                                <h2><small>Overall Value</small></h2><br/>
+                                <table style="width:100%; text-align:center;">
+                                    <tr>
+                                        <td><label class="radioLabel"><input type="radio" id="Q12" name="Q12" value="1" />1</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q12" name="Q12" value="2" />2</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q12" name="Q12" value="3" />3</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q12" name="Q12" value="4" />4</label></td>
+                                        <td><label class="radioLabel"><input type="radio" id="Q12" name="Q12" value="5" />5</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin: 2em 0 14em 0;">
+                            <input type="submit" class="btn btn-success" value="Submit" style="padding:0.5em 2em; font-size:2em;" />
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-lg-4 col-sm-4 sidePics">
+                    <img id="polaroids" width="100%" src="https://dl.dropboxusercontent.com/u/14320617/rae/century/polaroids.gif" alt="photos" />
+                </div>
+            </div>
+            
+            <button id="alertBox" type="button" class="hidden" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+    
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Missing Information</h4>
+                        </div>
+                    <div class="modal-body">
+                    <p>Please complete the entire form.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            
+        </div>
+        <script type="text/javascript">
+            form = document.getElementsByTagName('form')[0];
+            form.onsubmit = function () {
+                var allText = document.getElementsByTagName ('textarea');
+            
+                for (var i = 0; i < allText.length; ++i) {
+                    allText[i].value = (allText[i].value).replace (/\n/g, ' ');
+                }
+                
+                var fields = document.getElementsByClassName('form-control');
+                var form = document.getElementsByTagName('form')[0];
+                var emptyFields = 0;
+                
+                for (var i = 0; i < fields.length; i++) {
+                    if (fields[i].value == '') {
+                        fields[i].style.backgroundColor = 'pink';
+                        ++emptyFields;
+                    }
+                    else {
+                        fields[i].style.backgroundColor = 'white';
+                    }
+                }
+                
+                radios = $('input:radio');
+                q7 = {'value':false, 'el':document.getElementsByClassName('radio')[0].parentNode};
+                q8 = {'value':false, 'el':document.getElementsByClassName('radio')[1].parentNode};
+                q9 = {'value':false, 'el':document.getElementsByClassName('radio')[2].parentNode};
+                q10 = {'value':false, 'el':document.getElementsByClassName('radio')[3].parentNode};
+                q11 = {'value':false, 'el':document.getElementsByClassName('radio')[4].parentNode};
+                q12 = {'value':false, 'el':document.getElementsByClassName('radio')[5].parentNode};
+                
+                for(var i = 0; i < radios.length; i++) {
+                    if(i < 5 && radios[i].checked == true) {
+                        q7.value = true;
+                        q7.el.style.backgroundColor = 'white';
+                    }
+                    if(i >= 5 && i < 10 && radios[i].checked == true) {
+                        q8.value = true;
+                        q8.el.style.backgroundColor = 'white';
+                    }
+                    if(i >= 10 && i < 15 && radios[i].checked == true) {
+                        q9.value = true;
+                        q9.el.style.backgroundColor = 'white';
+                    }
+                    if(i >= 15 && i < 20 && radios[i].checked == true) {
+                        q10.value = true;
+                        q10.el.style.backgroundColor = 'white';
+                    }
+                    if(i >=20 && i < 25 && radios[i].checked == true) {
+                        q11.value = true;
+                        q11.el.style.backgroundColor = 'white';
+                    }
+                    if(i >=25 && radios[i].checked == true) {
+                        q12.value = true;
+                        q12.el.style.backgroundColor = 'white';
+                    }
+                }
+                
+                if (q7.value == false) {
+                    q7.el.style.backgroundColor = 'pink';
+                }
+                if (q8.value == false) {
+                    q8.el.style.backgroundColor = 'pink';
+                }
+                if (q9.value == false) {
+                    q9.el.style.backgroundColor = 'pink';
+                }
+                if (q10.value == false) {
+                    q10.el.style.backgroundColor = 'pink';
+                }
+                if (q11.value == false) {
+                    q11.el.style.backgroundColor = 'pink';
+                }
+                if (q12.value == false) {
+                    q12.el.style.backgroundColor = 'pink';
+                }
+                
+                if (emptyFields > 0 || q7.value == false || q8.value == false || q9.value == false || q10.value == false || q11.value == false || q12.value == false) {
+                    document.getElementById('alertBox').click();
+                    return false;
+                }
+                
+                form.submit();
+            } 
+        </script>
+    </body>
+</html>
