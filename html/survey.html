@@ -41,7 +41,7 @@
                     </div>
                     
                     <!-- QUESTIONS START HERE -->
-                    <form method="post" role="form" id="survey">
+                    <form role="form" id="survey" onsubmit="javascript:return false;">
                         
                         <div class="form-group">
                             <label for="Q1"><h2><small>What one word describes Century Refrigeration unit coolers?</small></h2></label>
@@ -166,7 +166,7 @@
                         </div>
                         
                         <div style="text-align: center; margin: 2em 0 14em 0;">
-                            <input type="submit" class="btn btn-success" value="Submit" style="padding:0.5em 2em; font-size:2em;" />
+                            <button type="button" class="btn btn-success" style="padding:0.5em 2em; font-size:2em;" onclick="javascript:location.assign('thankyou.html')">Submit</button>
                         </div>
                     </form>
                 </div>
