@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Century Refrigeration</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <style>
+            .logo { text-align: center; margin-bottom: 2em; }
+            #logo { margin-top: -3em; }
+            .container-fluid { background-color: #ffffff; }
+            .greenDiv { background-color: #0baa4b; height: 6em; }
+            .greenText { color: #0baa4b; }
+            .text1 { color: #ffffff; font-size: 18pt; padding-left: 12px; padding-right: 12px; }
+            #Btn1 { padding:0.5em 2em; font-size:1.5em; }
+            .spacer { height: 2em; }
+            .content { 
+                width: 98%; 
+                margin: auto; 
+                background: url("../images/camera.gif") 80% 30%/25% no-repeat ; 
+                padding: 0 1em 0 1em; 
+            }
+            .ui-datepicker-inline {
+                margin: auto;
+            }
+            p {
+                font-size: 120%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="greenDiv"></div>
+        <div class="container-fluid">
+            
+            <div class="logo">
+                <img width="280" id="logo" src="../images/logo.png" alt="logo" />
+            </div>
+            
+            <div class="row content">
+                
+                <div class="col-lg-3 col-xs-0"></div>
+                
+                <div class="col-lg-5 col-sm-7 col-xs-12">
+                    
+                    <div class="greenText">
+                        <p>Thanks for your focus and allowing us to capture your thoughts.<br/><br/>
+                        Please update your information and you will be entered to receive a free COOL new polaroid camera that will help you
+                        capture the things you enjoy.</p>
+                    </div>
+                    
+                    <!-- FORM STARTS HERE -->
+                    <form id="pinfo" method="post" role="form">
+                        
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" value="##firstname##" />
+                            </div>
+                            
+                            <div class="form-group col-lg-6">
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname" value="##lastname##" />
+                            </div>    
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label for="email">Email Address:</label>
+                                <input type="text" class="form-control" name="email" id="email" value="##email##" />
+                            </div>
+                            
+                            <div class="form-group col-lg-6">
+                                <label for="phone">Phone Number:</label>
+                                <input type="text" class="form-control" name="phone" id="phone" value="##phone##" />
+                            </div>    
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="address1">Address:</label>
+                            <input type="text" class="form-control" name="address1" id="address1" value="##address1##" />
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label for="city">City:</label>
+                                <input type="text" class="form-control" name="city" id="city" value="##city##" />
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label for="state">State:</label>
+                                <input type="text" class="form-control" name="state" id="state" value="##state##" />
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label for="zip">Zip Code:</label>
+                                <input type="text" class="form-control" name="zip" id="zip" value="##zip##" />
+                                <input type="text" class="hidden" id="profup" name="profileUpdated" value="##profileUpdated##" />
+                            </div>    
+                        </div>
+                    </form>
+                    <!-- END FORM /-->
+                    
+                    <div style="text-align: center; margin: 2em auto;">
+                        <button id="Btn1" type="button" class="btn btn-success" onclick="mySubmit();">Update Contact Info</button>
+                    </div>
+            
+                    <div class="greenText">
+                        <p>Sign up for a quick phone interview to tell us more. You and your
+                        family will be entered into a drawing to receive free photos
+                        with a professional photographer of your choice.</p>
+                    </div>
+
+                    <div style="text-align: center; margin: 2em auto;">
+                        <button id="callbtn" type="button" class="btn btn-success" style="padding:0.5em 1em; font-size:1.5em;">
+                            Enter to win free photos
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-5 col-xs-3"></div>
+            </div>
+            
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+    
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Missing Information</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please complete the entire form.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Date Calendar Modal -->
+            <div class="modal fade" id="dateModal" role="dialog">
+                <div class="modal-dialog">
+    
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Schedule a time for us to call you.</h4>
+                        </div>
+                        
+                        <div class="modal-body" style="margin:auto;">
+                            
+                            <form id="callback" class="form-horizontal" method="post" role="form">
+
+                                    <label>Date: </label>
+                                    
+                                    <select id="callbackdate" name="callbackdate" class="form-control">
+                                        <option value="##callbackdate##">Select Date</option>
+                                        <option value="10-28-15">Wednesday, Oct. 28 2015</option>
+                                        <option value="10-29-15">Thursday, Oct. 29 2015</option>
+                                        <option value="10-30-15">Friday, Oct. 30 2015</option>
+                                        <option value="11-2-15">Monday, Nov. 2 2015</option>
+                                        <option value="11-3-15">Tuesday, Nov. 3 2015</option>
+                                    </select>
+                                
+                                    <label>Time: </label>
+
+                                    <select id="callbacktime" name="callbacktime" class="form-control">
+                                        <option value="##callbacktime##">Select Time</option>
+                                        <option value="10am CST">10am CST</option>
+                                        <option value="11am CST">11am CST</option>
+                                        <option value="2pm CST">2pm CST</option>
+                                        <option value="3pm CST">3pm CST</option>
+                                    </select>
+                            </form>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button id="savebtn" type="button" class="btn btn-default">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="gotIt" class="modal" rold="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        
+                        <div class="modal-body" style="text-align:center;">
+                            <h3><small>Thanks for updating your info!</small></h3>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="alertBox" type="button" class="hidden" data-toggle="modal" data-target="#myModal"></button>
+            <button id="dateBox" type="button" class="hidden" data-toggle="modal" data-target="#dateModal"></button>
+            <button id="gotItBox" type="button" class="hidden" data-toggle="modal" data-target="#gotIt"></button>
+        </div>
+        <!-- End Container -->
+        
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+
+                var profileUpdated = ##profileUpdated##;
+                var callbacktime = "##callbacktime##";
+
+                if( callbacktime != 'false' ) {
+                    $('#callbtn').html("Appointment confirmed");
+                    $('#callbtn').addClass("disabled");
+                }
+                else {
+                    $('#callbtn').on('click', function () {
+                        var emptyFields = 0;
+                        var fields = document.querySelectorAll("#pinfo input");
+
+                        for (var i = 0; i < fields.length; i++) {
+                            if( fields[i].value == "" ) {
+                                fields[i].style.backgroundColor = 'pink';
+                                ++emptyFields;
+                            }
+                        }
+
+                        if (emptyFields > 0) {
+                            document.getElementById('alertBox').click();
+                            return false;
+                        }
+
+                        $('#dateBox').click(); //activate modal window
+                    });
+                }
+
+                $('input:checkbox:eq(0)').on("click", function(ev){
+                    $('input:checkbox:eq(1)').attr("checked", false);  
+                });
+
+                $('input:checkbox:eq(1)').on("click", function(ev){
+                    $('input:checkbox:eq(0)').attr("checked", false);  
+                });
+
+                // SCHEDULE A PHONE SURVEY WITH CONTACT
+                $('#savebtn').on("click", function(){
+                    $('#savebtn').html("Sending...");
+                    $('#savebtn').addClass("disabled");
+
+                    var data = $('#pinfo').serialize() + "&" + $('#callback').serialize();
+                    console.log( data );
+                    
+                    $.post( '', data  ).done(function(){
+                        window.open("callback.html", "_self", false);
+                    });
+                    
+                });
+
+                // UPDATE CONTACT INFO
+                mySubmit = function () { 
+                    var emptyFields = 0;
+                    var fields = document.querySelectorAll("#pinfo input");
+
+                    for (var i = 0; i < fields.length; i++) {
+                        if( fields[i].value == "" ) {
+                            fields[i].style.backgroundColor = 'pink';
+                            ++emptyFields;
+                        }
+                    }
+
+                    if (emptyFields > 0) {
+                        document.getElementById('alertBox').click();
+                        $('#Btn1').html("Submit");
+                        $('#Btn1').removeClass("disabled");
+                        return false;
+                    }
+                    
+                    $('#profup').val(true);
+                    var data = $('#pinfo').serialize();
+                    $('#Btn1').addClass("disabled");
+                    $('#gotItBox').click();
+                    $('.modal-body h3 small').html('Sending...');
+                    $('.modal-footer button').hide();
+                    
+                    $.post( '', data ).done( function() {
+                        $('.modal-body h3 small').html('Info Updated!');
+                        $('.modal-footer button').fadeIn();
+                        $('#Btn1').removeClass('btn-success');
+                        $('#Btn1').addClass('btn-info');
+                        $('#Btn1').removeClass('disabled');
+                        $('#Btn1').html('Info Updated');
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
